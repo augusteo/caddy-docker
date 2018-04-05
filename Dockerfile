@@ -40,7 +40,7 @@ COPY Caddyfile /etc/Caddyfile
 COPY index.html /srv/index.html
 
 # create log file
-touch /etc/requests.log
+RUN touch /etc/requests.log
 
 # install process wrapper
 COPY --from=builder /go/bin/parent /bin/parent
